@@ -1,0 +1,24 @@
+<odoo>
+    <record model="ir.ui.view" id="se_backend_form_view">
+        <field name="model">se.backend</field>
+        <field name="inherit_id" ref="connector_search_engine.se_backend_form_view" />
+        <field name="arch" type="xml">
+            <group name="se-main" position="after">
+                <group name="elasticsearch">
+                    <field name="es_server_host" string="Host" placeholder="http://elastic:9200" />
+                    <field name="auth_type" />
+                    <field name="es_user" string="User" />
+                    <field name="es_password" string="Password" password="1" />
+                    <field name="ssl" string="SSL" />
+                    <field name="api_key_id" string="API key ID" />
+                    <field name="api_key" string="API key" />
+                </group>
+                <group name="se-params">
+                    <field name="es_max_retries" string="Max retries" />
+                    <field name="es_retry_on_timeout" string="Retry on timeout" />
+                    <field name="es_timeout" string="Timeout" />
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

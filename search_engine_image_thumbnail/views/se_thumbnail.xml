@@ -1,0 +1,37 @@
+<odoo>
+    <record model="ir.ui.view" id="se_thumbnail_form_view">
+        <field name="name">se.thumbnail.form</field>
+        <field name="model">se.thumbnail</field>
+        <field name="inherit_id" ref="fs_image_thumbnail.fs_image_thumbnail_mixin_form_view" />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <!-- add a hidden field to be able to extend the base view defined for the mixin -->
+            <field name="base_name" position="after">
+                <field name="id" invisible="1" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="se_thumbnail_search_view">
+        <field name="name">se.thumbnail.search</field>
+        <field name="model">se.thumbnail</field>
+        <field name="inherit_id" ref="fs_image_thumbnail.fs_image_thumbnail_mixin_search_view" />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <field name="mimetype" position="before">
+                <field name="create_uid" string="Created by" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="se_thumbnail_tree_view">
+        <field name="name">se.thumbnail.tree</field>
+        <field name="model">se.thumbnail</field>
+        <field name="inherit_id" ref="fs_image_thumbnail.fs_image_thumbnail_mixin_tree_view" />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <!-- add a hidden field to be able to extend the base view defined for the mixin -->
+            <field name="base_name" position="after">
+                <field name="id" invisible="1" />
+            </field>
+        </field>
+    </record>
+</odoo>

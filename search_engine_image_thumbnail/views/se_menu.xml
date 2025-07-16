@@ -1,0 +1,7 @@
+<odoo>
+    <record model="ir.ui.menu" id="se_thumbnails_menu">
+        <field name="name">Thumbnails</field>
+        <field name="parent_id" ref="connector_search_engine.se_root_menu" />
+        <field name="sequence" eval="16" />
+    </record>
+</odoo>
